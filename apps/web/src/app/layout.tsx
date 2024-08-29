@@ -2,6 +2,13 @@ import type { Metadata, Viewport } from "next";
 import { GeistMono } from "geist/font/mono";
 import { GeistSans } from "geist/font/sans";
 
+import { Inter } from "next/font/google";
+
+export const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+});
+
 import { cn } from "@portfolio/ui";
 import { ThemeProvider, ThemeToggle } from "@portfolio/ui/theme";
 import { Toaster } from "@portfolio/ui/toast";
@@ -43,19 +50,11 @@ export default function RootLayout(props: { children: React.ReactNode }) {
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          "min-h-screen bg-background font-sans text-foreground antialiased",
-          GeistSans.variable,
-          GeistMono.variable,
+          "min-h-screen bg-background text-foreground antialiased tracking-tight",
+          inter.className,
         )}
       >
         {props.children}
-        
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div className="absolute bottom-4 right-4">
-            <ThemeToggle />
-          </div>
-          <Toaster />
-        </ThemeProvider>
       </body>
     </html>
   );

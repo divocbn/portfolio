@@ -1,14 +1,15 @@
 import { PrismaClient } from "@prisma/client";
 
-// serverless prisma
-export const prisma =
-    global.prisma ||
-    new PrismaClient();
+const createPrismaClient = () =>
+  new PrismaClient({
+    log:
+      process.env.NODE_ENV === "development" ? ["query", "error", "warn"] : ["error"],
+  });
 
-declare global {
-    var prisma:
-        | PrismaClient
-        | undefined;
-}
+const globalForPrisma = globalThis as unknown as {
+  prisma: ReturnType<typeof createPrismaClient> | undefined;
+};
 
-if (process.env.NODE_ENV === "development") global.prisma = prisma;
+export const db = globalForPrisma.prisma ?? createPrismaClient();
+
+if (process.env.NODE_ENV !== "production") globalForPrisma.prisma = db;
