@@ -1,4 +1,5 @@
 import { db } from "@portfolio/db";
+import { Button } from "@portfolio/ui/button";
 import { notFound } from "next/navigation";
 import { PropsWithChildren } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
@@ -15,8 +16,8 @@ export default async function Layout({ children }: PropsWithChildren) {
         This portfolio is open source! Check it out.
       </div>
 
-      <main className="container h-screen py-16">
-        <div className="flex flex-col gap-10">
+      <main className="flex flex-1 flex-row ">
+        <div className="flex flex-1 min-w-0 flex-col gap-10 container py-12">
           <div className="flex flex-col gap-1">
             <div className="flex flex-row gap-2">
               <h1 className="text-6xl font-bold tracking-tighter">
@@ -33,6 +34,10 @@ export default async function Layout({ children }: PropsWithChildren) {
           </div>
 
           {children}
+        </div>
+
+        <div className="sticky top-0 flex h-dvh w-52 shrink-0 flex-col gap-4 pr-12 pt-12 max-lg:hidden">
+          <Button variant={"outline"}>About me</Button>
         </div>
       </main>
     </div>

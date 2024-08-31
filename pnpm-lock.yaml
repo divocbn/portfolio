@@ -93,6 +93,12 @@ importers:
       '@trpc/server':
         specifier: 'catalog:'
         version: 11.0.0-rc.477
+      '@types/dashify':
+        specifier: ^1.0.3
+        version: 1.0.3
+      dashify:
+        specifier: ^2.0.0
+        version: 2.0.0
       geist:
         specifier: ^1.3.1
         version: 1.3.1(next@14.2.5(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
@@ -392,7 +398,7 @@ importers:
         version: 7.35.0(eslint@9.9.0(jiti@1.21.6))
       eslint-plugin-react-hooks:
         specifier: rc
-        version: 5.1.0-rc-7771d3a7-20240827(eslint@9.9.0(jiti@1.21.6))
+        version: 5.1.0-rc-e56f4ae3-20240830(eslint@9.9.0(jiti@1.21.6))
       eslint-plugin-turbo:
         specifier: ^2.0.13
         version: 2.0.13(eslint@9.9.0(jiti@1.21.6))
@@ -1396,6 +1402,9 @@ packages:
   '@types/cookie@0.6.0':
     resolution: {integrity: sha512-4Kh9a6B2bQciAhf7FSuMRRkUWecJgJu9nPnx3yzpsfXX/c50REIqpHY4C82bXP90qrLtXtkDxTZosYO3UpOwlA==}
 
+  '@types/dashify@1.0.3':
+    resolution: {integrity: sha512-5tFbcvWDPO1Il1Ck6Rtb4GJvD9m7HXzex50Z9wm2+YrUqN1Da3NDJnaipqtr2WlmtvOY2O/ftUrPECMKu+Bc+Q==}
+
   '@types/glob@7.2.0':
     resolution: {integrity: sha512-ZUxbzKl0IfJILTS6t7ip5fQQM/J3TJYubDm3nMbgubNNYS62eXeUpoLUC8/7fJNiFYHTrGPQn7hspDUzIHX3UA==}
 
@@ -1798,6 +1807,10 @@ packages:
   damerau-levenshtein@1.0.8:
     resolution: {integrity: sha512-sdQSFB7+llfUcQHUQO3+B8ERRj0Oa4w9POWMI/puGtuf7gFywGmkaLCElnudfTiKZV+NvHqL0ifzdrI8Ro7ESA==}
 
+  dashify@2.0.0:
+    resolution: {integrity: sha512-hpA5C/YrPjucXypHPPc0oJ1l9Hf6wWbiOL7Ik42cxnsUOhWiCB/fylKbKqqJalW9FgkNQCw16YO8uW9Hs0Iy1A==}
+    engines: {node: '>=4'}
+
   data-uri-to-buffer@6.0.2:
     resolution: {integrity: sha512-7hvf7/GW8e86rW0ptuwS3OcBGDjIi6SZva7hCyWC0yYry2cOPmLIjXAUHI6DK2HsnwJd9ifmt57i8eV2n4YNpw==}
     engines: {node: '>= 14'}
@@ -2122,8 +2135,8 @@ packages:
     peerDependencies:
       eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8
 
-  eslint-plugin-react-hooks@5.1.0-rc-7771d3a7-20240827:
-    resolution: {integrity: sha512-SY8Fq2Qz7Bb7xJnv2siIUFzOEf/BahfvIbxHxpY4ud1OGiCpm0d+6mSxGn0CegCCbj82SvIHCrM5LHgAgADW2g==}
+  eslint-plugin-react-hooks@5.1.0-rc-e56f4ae3-20240830:
+    resolution: {integrity: sha512-w+VTy81b3KCQYWhe2Ux/kVqhiyqieaWbHfPlSwU8sKLeHOPl2LPlCn1wWRJE7KMb5/bkrOtAyWrwhlasqUsePA==}
     engines: {node: '>=10'}
     peerDependencies:
       eslint: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0-0 || ^9.0.0
@@ -4619,6 +4632,8 @@ snapshots:
 
   '@types/cookie@0.6.0': {}
 
+  '@types/dashify@1.0.3': {}
+
   '@types/glob@7.2.0':
     dependencies:
       '@types/minimatch': 5.1.2
@@ -5091,6 +5106,8 @@ snapshots:
 
   damerau-levenshtein@1.0.8: {}
 
+  dashify@2.0.0: {}
+
   data-uri-to-buffer@6.0.2: {}
 
   data-view-buffer@1.0.1:
@@ -5489,7 +5506,7 @@ snapshots:
       safe-regex-test: 1.0.3
       string.prototype.includes: 2.0.0
 
-  eslint-plugin-react-hooks@5.1.0-rc-7771d3a7-20240827(eslint@9.9.0(jiti@1.21.6)):
+  eslint-plugin-react-hooks@5.1.0-rc-e56f4ae3-20240830(eslint@9.9.0(jiti@1.21.6)):
     dependencies:
       eslint: 9.9.0(jiti@1.21.6)
 

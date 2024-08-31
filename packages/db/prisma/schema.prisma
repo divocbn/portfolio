@@ -21,3 +21,17 @@ model Portfolio {
 
   description String
 }
+
+model Experience {
+  id String @id @default(uuid())
+
+  company String
+  title   String
+
+  description String
+
+  from DateTime
+  to   DateTime
+
+  active Boolean @default(false)
+}
