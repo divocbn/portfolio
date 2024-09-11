@@ -13,8 +13,10 @@ export default async function WorkExperience() {
 
   return (
     <div className="flex flex-col gap-5">
-      <h1 className="text-3xl font-semibold tracking-tighter">Work Experience</h1>
-
+      <div className="flex flex-row gap-5 items-center">
+        <p className="text-3xl font-semibold text-black/20">01</p>
+        <h1 className="text-3xl font-semibold tracking-tighter">Work Experience</h1>
+      </div>
       <div className="max-w-2xl">
         {experiences.map(experience =>
           <div
@@ -44,6 +46,11 @@ export default async function WorkExperience() {
             </div>
           </div>
         )}
+      </div>
+
+      <div className="flex flex-row gap-5 items-center">
+        <p className="text-3xl font-semibold text-black/20">02</p>
+        <h1 className="text-3xl font-semibold tracking-tighter">Skill Set</h1>
       </div>
     </div>
   );
